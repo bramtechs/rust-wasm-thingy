@@ -16,6 +16,14 @@ impl Pixel {
                 | ((r as u32) << (0 * 8)),
         )
     }
+    pub const fn rgb(r: u8, g: u8, b: u8) -> Self {
+        Self(
+            ((255 as u32) << (3 * 8))
+                | ((b as u32) << (2 * 8))
+                | ((g as u32) << (1 * 8))
+                | ((r as u32) << (0 * 8)),
+        )
+    }
 }
 
 #[repr(C)]
